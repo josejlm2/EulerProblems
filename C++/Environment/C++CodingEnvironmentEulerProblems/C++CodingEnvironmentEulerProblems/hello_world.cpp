@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 
 int main()
 {
@@ -6,3 +6,4 @@ int main()
 	std::cin.get();
 	return 0;
 }
+*/
