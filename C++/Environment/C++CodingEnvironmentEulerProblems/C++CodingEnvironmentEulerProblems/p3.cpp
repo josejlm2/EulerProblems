@@ -54,7 +54,7 @@ int main()
 			std::cout << "FALSE" << std::endl;
 		}
 	}
-	*/
+	
 	
 	
 	//APPROACH #1
@@ -76,7 +76,7 @@ int main()
 	}
 
 
-	/*
+	
 	//APPROACH #2
 	long double FINAL_NUMBER = 600851475143;
 	long double largestPrime = 0;
