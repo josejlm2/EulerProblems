@@ -78,7 +78,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\p4\p4.cpp" />
+    <ClCompile Include="..\..\..\p5\p5.cpp" />
     <ClCompile Include="hello_world.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
