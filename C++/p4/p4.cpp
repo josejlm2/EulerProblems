@@ -62,24 +62,26 @@ int main(){
 	int second_number = 999;
 	int palindrome = 0;
 
-
-
-	while (first_number>=0)
+	for (int i = 100; i < 1000; i++)
 	{
-		while (second_number>=0)
+		for (int k = 100; k < 1000; k++)
 		{
-			int temp = first_number*second_number;
-			if ((isPalindrome(temp))&(temp>palindrome)){
-				palindrome = temp;
+			int temp = i*k;
+			if (isPalindrome(temp))
+			{	
+				std::cout << i << "X" << k << " = " << temp << std::endl;
+				if (temp>palindrome){
+					palindrome = temp;
+				}
 			}
-			second_number--;
 		}
-
-		first_number--;
 	}
+
 
 	std::cout << "The largest palindrome is " << palindrome << std::endl;
 	
+
+	//THE ANSWER IS: 906609
 	std::cin.get();
 	return 0;
 
