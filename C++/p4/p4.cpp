@@ -9,19 +9,57 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 #include <iostream>
 #include "math.h"
+#include <vector>
 
-bool isPalindrom(int num){
+bool isPalindrome(int num)
+{
+	std::vector<int> tempNumberContainer;
+	int original_number = num;
+	int backwards_number = 0;
 
+	//Inserts each digit in reverse order inside vector
+	while (num > 0)
+	{
+		tempNumberContainer.insert(tempNumberContainer.begin(), num % 10);
+		num = num / 10;
+	}
 
+	//Creates the backwards number 
+	for (int i = 0; i < tempNumberContainer.size(); i++)
+	{
+		int digit_place = 1;
+		for (int k = 0; k < i; k++){
+			digit_place *= 10;
+		}
+		backwards_number += tempNumberContainer[i] * digit_place;	
+	}
 
+	if (original_number == backwards_number){
+		return true;
+	}
+	else return false;
 }
 
 int main(){
 
+	int a = 1;
 
-
-
-	std::cout << "Hello World!" << std::endl;
+	while (a != 0)
+	{
+		std::cout << "Enter number: " << std::endl;
+		std::cin >> a;
+		if (isPalindrome(a))
+		{
+			std::cout << "Palindrome!" << std::endl;
+		}
+		else
+		{
+			std::cout << "Nope!" << std::endl;
+		}
+	}
+	
 	std::cin.get();
 	return 0;
+
+
 }

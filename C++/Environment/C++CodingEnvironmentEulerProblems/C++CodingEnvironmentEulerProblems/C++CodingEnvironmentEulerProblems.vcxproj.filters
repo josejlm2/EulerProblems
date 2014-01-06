@@ -18,7 +18,7 @@
     <ClCompile Include="hello_world.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="p3.cpp">
+    <ClCompile Include="..\..\..\p4\p4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
