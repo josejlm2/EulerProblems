@@ -41,9 +41,9 @@ bool isPalindrome(int num)
 }
 
 int main(){
-
+	
+	/*PALINDROME TEST
 	int a = 1;
-
 	while (a != 0)
 	{
 		std::cout << "Enter number: " << std::endl;
@@ -56,7 +56,29 @@ int main(){
 		{
 			std::cout << "Nope!" << std::endl;
 		}
+	}*/
+
+	int first_number = 999;
+	int second_number = 999;
+	int palindrome = 0;
+
+
+
+	while (first_number>=0)
+	{
+		while (second_number>=0)
+		{
+			int temp = first_number*second_number;
+			if ((isPalindrome(temp))&(temp>palindrome)){
+				palindrome = temp;
+			}
+			second_number--;
+		}
+
+		first_number--;
 	}
+
+	std::cout << "The largest palindrome is " << palindrome << std::endl;
 	
 	std::cin.get();
 	return 0;
